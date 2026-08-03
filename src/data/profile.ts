@@ -41,7 +41,7 @@ export const experience: Role[] = [
   {
     title: "Analytics Engineer",
     company: "FlairsTech",
-    period: "04/2024 – Present",
+    period: "04/2024 – 08/2026",
     location: "Cairo",
     bullets: [
       "Build end-to-end analytics solutions in Snowflake, dbt, and Power BI, converting raw source data into scalable, analytics-ready models powering business-critical reporting for international stakeholders.",
@@ -55,7 +55,7 @@ export const experience: Role[] = [
     title: "Business Intelligence Developer",
     company: "Dukan",
     period: "02/2025 – 04/2025",
-    location: "Contract",
+    location: "KSA · 3-month contract",
     bullets: [
       "Delivered executive dashboards and paginated reports in Power BI and Report Builder, supporting finance and strategic decision-making.",
       "Partnered with Finance leadership to audit reporting workflows and surface scalability and performance gaps.",
