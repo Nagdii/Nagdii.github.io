@@ -24,7 +24,7 @@ export const contact = {
 
 export const stats = [
   { value: "3+", label: "Years in Analytics & BI" },
-  { value: "4", label: "Companies, incl. banking & e-commerce" },
+  { value: "4", label: "Companies, enterprise to startup" },
   { value: "6+", label: "Business functions served" },
   { value: "E2E", label: "Warehouse → model → dashboard" },
 ];
@@ -70,7 +70,7 @@ export const experience: Role[] = [
     location: "Cairo",
     bullets: [
       "Built and maintained enterprise Power BI dashboards and paginated reports tracking marketing campaigns, KPIs, and performance metrics across departments.",
-      "Ran ETL with SQL and PL/SQL across SQL Server and Oracle within a regulated banking environment.",
+      "Ran ETL with SQL and PL/SQL across SQL Server and Oracle within a highly regulated enterprise environment.",
       "Replaced a manual daily refresh with automated, scheduled report distribution and row-level security (RLS) KPI delivery to Marketing, Executive, and POS teams using Power Automate.",
       "Resolved data discrepancies to maintain integrity across regulated reporting.",
     ],
@@ -164,8 +164,8 @@ export const projects: Project[] = [
     stack: ["Snowflake", "dbt", "Power BI", "Sigma", "SQL Server", "REST APIs"],
   },
   {
-    title: "Automated KPI Delivery with RLS in Regulated Banking",
-    context: "QNB AL-AHLI · Enterprise banking",
+    title: "Automated KPI Delivery with Row-Level Security",
+    context: "QNB AL-AHLI · Regulated enterprise",
     problem:
       "KPI reporting depended on a manual daily refresh, delaying delivery to Marketing, Executive, and POS teams inside a regulated environment.",
     solution:

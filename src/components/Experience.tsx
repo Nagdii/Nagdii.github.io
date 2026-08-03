@@ -7,7 +7,7 @@ export default function Experience() {
       id="experience"
       eyebrow="Experience"
       title="Where I've built"
-      lead="Banking, e-commerce, and outsourcing — regulated environments, international stakeholders, and Agile teams."
+      lead="Regulated enterprise environments, international stakeholders, and Agile delivery teams."
     >
       <ol className="relative space-y-10 border-l border-white/10 pl-8">
         {experience.map((role) => (
