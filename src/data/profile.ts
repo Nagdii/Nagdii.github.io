@@ -39,11 +39,12 @@ export interface Role {
 
 export const experience: Role[] = [
   {
-    title: "Analytics Engineer",
+    title: "Analytics Engineer II",
     company: "FlairsTech",
     period: "04/2024 – 08/2026",
-    location: "Cairo",
+    location: "Cairo · Client: Dynamite",
     bullets: [
+      "Embedded with Dynamite as Senior Analytics Consultant, serving as their analytics partner across the work below.",
       "Build end-to-end analytics solutions in Snowflake, dbt, and Power BI, converting raw source data into scalable, analytics-ready models powering business-critical reporting for international stakeholders.",
       "Engineer semantic models with DAX and Power Query (M), improving refresh performance, maintainability, and accuracy across reporting layers.",
       "Maintain data pipelines integrating REST APIs, SQL Server, and multiple external sources for consistently refreshed insights.",
