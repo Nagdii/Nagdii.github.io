@@ -24,7 +24,7 @@ export const contact = {
 
 export const stats = [
   { value: "3+", label: "Years in Analytics & BI" },
-  { value: "4", label: "Companies, enterprise to startup" },
+  { value: "5", label: "Companies, enterprise to startup" },
   { value: "6+", label: "Business functions served" },
   { value: "E2E", label: "Warehouse → model → dashboard" },
 ];
@@ -42,14 +42,24 @@ export const experience: Role[] = [
     title: "Analytics Engineer II",
     company: "FlairsTech",
     period: "04/2024 – 08/2026",
-    location: "Cairo · Client: Dynamite",
+    location: "Cairo",
     bullets: [
-      "Embedded with Dynamite as Senior Analytics Consultant, serving as their analytics partner across the work below.",
-      "Build end-to-end analytics solutions in Snowflake, dbt, and Power BI, converting raw source data into scalable, analytics-ready models powering business-critical reporting for international stakeholders.",
-      "Engineer semantic models with DAX and Power Query (M), improving refresh performance, maintainability, and accuracy across reporting layers.",
-      "Maintain data pipelines integrating REST APIs, SQL Server, and multiple external sources for consistently refreshed insights.",
-      "Automated monitoring and alerting in Power Automate, surfacing data anomalies before publication and reducing manual validation effort.",
-      "Deliver executive dashboards and paginated reports in Power BI and Sigma Computing for Planning, Sales Ops, Finance, Marketing, and Executive teams.",
+      "Employer of record for a two-year embedded consulting engagement, deployed to Groupe Dynamite (Montreal, remote) as their analytics consultant — delivery detailed below.",
+      "Optimized SQL queries, stored procedures, and scheduled jobs, improving report refresh efficiency and processing consistency across client reporting workloads.",
+    ],
+  },
+  {
+    title: "Analytics Engineer Consultant",
+    company: "Groupe Dynamite",
+    period: "04/2024 – 08/2026",
+    location: "Montreal, Canada · Remote · Contract",
+    bullets: [
+      "Engaged via FlairsTech as an embedded analytics consultant for Groupe Dynamite.",
+      "Built end-to-end analytics solutions in Snowflake, dbt, and Power BI, converting raw source data into scalable, analytics-ready models powering business-critical reporting.",
+      "Engineered semantic models with DAX and Power Query, improving refresh performance and accuracy across reporting layers.",
+      "Built and maintained data pipelines integrating REST APIs and SQL Server, delivering consistently refreshed insights.",
+      "Automated monitoring and alerting in Power Automate, reducing manual validation effort.",
+      "Developed executive dashboards and paginated reports serving stakeholders across Planning, Sales Ops, Finance, Marketing, and Executive teams.",
     ],
   },
   {
@@ -155,7 +165,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "End-to-End Analytics Platform on Snowflake + dbt",
-    context: "FlairsTech · International stakeholders",
+    context: "Groupe Dynamite · via FlairsTech",
     problem:
       "Raw data scattered across REST APIs, SQL Server, and external sources — no single analytics-ready layer to power business-critical reporting.",
     solution:
@@ -177,7 +187,7 @@ export const projects: Project[] = [
   },
   {
     title: "Pipeline Monitoring & Anomaly Alerting",
-    context: "FlairsTech · Reporting operations",
+    context: "Groupe Dynamite · Reporting operations",
     problem:
       "Data anomalies were reaching published reports before anyone caught them, forcing time-consuming manual validation of every refresh.",
     solution:
