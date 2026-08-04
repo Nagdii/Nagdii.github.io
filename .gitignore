@@ -2,3 +2,6 @@ node_modules
 dist
 *.local
 .DS_Store
+
+# CV exports land here with spaces in the name; only the hyphenated file is served
+public/cv/Khaled El Nagdy CV.pdf
