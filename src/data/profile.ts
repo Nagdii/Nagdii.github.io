@@ -160,9 +160,24 @@ export interface Project {
   solution: string;
   outcome: string;
   stack: string[];
+  repo?: string;
+  repoLabel?: string;
 }
 
 export const projects: Project[] = [
+  {
+    title: "Retail Analytics Platform — open source",
+    context: "Demo project · Runnable in one command",
+    problem:
+      "Enterprise analytics work sits behind NDAs, so the modeling decisions that actually matter are invisible to anyone evaluating the work.",
+    solution:
+      "Built a complete warehouse on synthetic retail data: staging → intermediate → marts, a star schema with two facts and four conformed dimensions, hashed surrogate keys, and 95 automated checks including a reconciliation test that catches silent row loss.",
+    outcome:
+      "Clone it and run `dbt build` — a working, tested warehouse in about a minute, no cloud account needed. Runs unchanged on DuckDB or Snowflake.",
+    stack: ["dbt", "DuckDB", "Snowflake", "SQL", "Star schema", "CI"],
+    repo: "https://github.com/Nagdii/retail-analytics-platform",
+    repoLabel: "View on GitHub",
+  },
   {
     title: "End-to-End Analytics Platform on Snowflake + dbt",
     context: "Groupe Dynamite · via FlairsTech",
