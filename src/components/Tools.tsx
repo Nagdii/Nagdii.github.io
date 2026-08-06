@@ -4,8 +4,15 @@ import DbtLineage from "./tools/DbtLineage";
 import DateDimension from "./tools/DateDimension";
 import SnowflakeCost from "./tools/SnowflakeCost";
 import DaxPatterns from "./tools/DaxPatterns";
+import WarehouseDesigner from "./tools/WarehouseDesigner";
 
 const TOOLS = [
+  {
+    id: "warehouse",
+    name: "Data Warehouse Designer",
+    blurb: "Flat extract → star schema + DDL",
+    Component: WarehouseDesigner,
+  },
   {
     id: "lineage",
     name: "dbt Lineage Visualizer",
@@ -44,7 +51,7 @@ export default function Tools() {
       lead="Small utilities I reach for on real projects. Everything runs in your browser — no sign-up, no upload, nothing leaves the page."
       className="bg-ink-900/40"
     >
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
         {TOOLS.map((t) => {
           const on = t.id === active;
           return (
