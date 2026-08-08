@@ -180,6 +180,19 @@ export const projects: Project[] = [
     repoLabel: "View on GitHub",
   },
   {
+    title: "Power BI Semantic Model as Code",
+    context: "Demo project · Open source",
+    problem:
+      "A .pbix is a binary blob. You can't diff it, review it, or see why a measure was written the way it was, so the most interesting part of BI work stays invisible.",
+    solution:
+      "Rebuilt a production-shaped model entirely as text: TMDL definitions, 23 documented measures, dynamic row level security, a written naming standard, and 10 Best Practice Analyzer rules that enforce it.",
+    outcome:
+      "CI validates the model on every push without Power BI installed, catching renamed columns, broken RLS and unguarded division before anyone opens a report.",
+    stack: ["Power BI", "TMDL", "DAX", "Tabular Editor", "RLS", "CI"],
+    repo: "https://github.com/Nagdii/powerbi-semantic-model",
+    repoLabel: "View on GitHub",
+  },
+  {
     title: "End-to-End Analytics Platform on Snowflake and dbt",
     context: "Groupe Dynamite · via FlairsTech",
     problem:
