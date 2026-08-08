@@ -58,7 +58,13 @@ export default function Hero() {
               </>
             );
             return s.href ? (
-              <a key={s.label} href={s.href} className="bg-ink-900 px-6 py-6 transition hover:bg-ink-800/70">
+              <a
+                key={s.label}
+                href={s.href}
+                target={s.href.startsWith("http") ? "_blank" : undefined}
+                rel="noreferrer"
+                className="bg-ink-900 px-6 py-6 transition hover:bg-ink-800/70"
+              >
                 {body}
               </a>
             ) : (

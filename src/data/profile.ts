@@ -9,7 +9,7 @@ export const identity = {
   location: "Cairo, Egypt · Open to remote",
   tagline: "From raw data to decisions people trust.",
   summary:
-    "I build the layer that sits between messy source data and the decisions a business makes with it. Most of my work happens in Snowflake, dbt, and Power BI: modelling raw data into something dependable, then turning it into reporting teams actually open. For the past two years I have been embedded with a Canadian retailer, and before that I worked inside a bank's reporting team, where getting the numbers wrong was not an option.",
+    "Most of my time goes to the unglamorous half of analytics: getting the model underneath right, so the dashboard sitting on top of it can actually be trusted. That work happens in Snowflake, dbt, and Power BI. For the past two years I've been embedded with a Canadian retailer, and before that inside a bank's reporting team, where a wrong number was a real problem rather than an inconvenience.",
   cvPath: "cv/Khaled-El-Nagdy-CV.pdf",
 };
 
@@ -22,12 +22,15 @@ export const contact = {
   github: "https://github.com/Nagdii",
 };
 
-// Keep the tools count in step with src/data/toolsRegistry.tsx
 export const stats = [
   { value: "3+", label: "Years in analytics and BI" },
   { value: "5", label: "Companies, startup to enterprise" },
   { value: "3", label: "Countries delivered for" },
-  { value: "11", label: "Free tools built and shared", href: "#/tools/warehouse" },
+  {
+    value: "95",
+    label: "Tests green in my open-source warehouse",
+    href: "https://github.com/Nagdii/retail-analytics-platform",
+  },
 ];
 
 export interface Role {
