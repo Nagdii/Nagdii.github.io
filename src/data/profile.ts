@@ -9,7 +9,7 @@ export const identity = {
   location: "Cairo, Egypt · Open to remote",
   tagline: "From raw data to decisions people trust.",
   summary:
-    "Most of my time goes to the unglamorous half of analytics: getting the model underneath right, so the dashboard sitting on top of it can actually be trusted. That work happens in Snowflake, dbt, and Power BI. For the past two years I've been embedded with a Canadian retailer, and before that inside a bank's reporting team, where a wrong number was a real problem rather than an inconvenience.",
+    "I'm happiest with data while it's still a mess. Working out the real grain of a table, chasing down why two reports disagree, then modelling it until the number finally stops moving: that's the part I genuinely enjoy. Professionally that means Snowflake, dbt, and Power BI, currently for a Canadian retailer. Outside of work I keep building things for the problems that annoy me, an open-source warehouse and eleven small tools, all free on this site.",
   cvPath: "cv/Khaled-El-Nagdy-CV.pdf",
 };
 
