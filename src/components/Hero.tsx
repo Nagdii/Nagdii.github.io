@@ -50,12 +50,23 @@ export default function Hero() {
         </div>
 
         <dl className="mt-16 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 sm:grid-cols-4">
-          {stats.map((s) => (
-            <div key={s.label} className="bg-ink-900 px-6 py-6">
-              <dt className="order-last mt-1 text-sm text-slate-400">{s.label}</dt>
-              <dd className="font-display text-3xl font-bold text-accent-400">{s.value}</dd>
-            </div>
-          ))}
+          {stats.map((s) => {
+            const body = (
+              <>
+                <dt className="order-last mt-1 text-sm text-slate-400">{s.label}</dt>
+                <dd className="font-display text-3xl font-bold text-accent-400">{s.value}</dd>
+              </>
+            );
+            return s.href ? (
+              <a key={s.label} href={s.href} className="bg-ink-900 px-6 py-6 transition hover:bg-ink-800/70">
+                {body}
+              </a>
+            ) : (
+              <div key={s.label} className="bg-ink-900 px-6 py-6">
+                {body}
+              </div>
+            );
+          })}
         </dl>
       </div>
     </section>

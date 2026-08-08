@@ -22,11 +22,12 @@ export const contact = {
   github: "https://github.com/Nagdii",
 };
 
+// Keep the tools count in step with src/data/toolsRegistry.tsx
 export const stats = [
   { value: "3+", label: "Years in analytics and BI" },
   { value: "5", label: "Companies, startup to enterprise" },
-  { value: "6+", label: "Business functions served" },
-  { value: "E2E", label: "Warehouse to model to dashboard" },
+  { value: "3", label: "Countries delivered for" },
+  { value: "11", label: "Free tools built and shared", href: "#/tools/warehouse" },
 ];
 
 export interface Role {
