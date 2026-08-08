@@ -1,17 +1,56 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { identity } from "../data/profile";
+import { TOOL_GROUPS, toolsByGroup } from "../data/toolsRegistry";
 
 const links = [
   { href: "#experience", label: "Experience" },
   { href: "#services", label: "Services" },
   { href: "#projects", label: "Projects" },
-  { href: "#tools", label: "Tools" },
   { href: "#stack", label: "Stack" },
   { href: "#contact", label: "Contact" },
 ];
 
+function Chevron({ open }: { open: boolean }) {
+  return (
+    <svg
+      width="11"
+      height="11"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`transition-transform ${open ? "rotate-180" : ""}`}
+      aria-hidden="true"
+    >
+      <path d="M6 9l6 6 6-6" />
+    </svg>
+  );
+}
+
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const [toolsOpen, setToolsOpen] = useState(false);
+  const [mobileToolsOpen, setMobileToolsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Close the dropdown on an outside click or Escape
+  useEffect(() => {
+    if (!toolsOpen) return;
+    const onClick = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) setToolsOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setToolsOpen(false);
+    };
+    document.addEventListener("mousedown", onClick);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onClick);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [toolsOpen]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/5 bg-ink-950/80 backdrop-blur">
@@ -21,11 +60,61 @@ export default function Nav() {
         </a>
 
         <div className="hidden items-center gap-7 md:flex">
-          {links.map((l) => (
+          {links.slice(0, 3).map((l) => (
             <a key={l.href} href={l.href} className="text-sm text-slate-400 transition hover:text-white">
               {l.label}
             </a>
           ))}
+
+          <div className="relative" ref={dropdownRef}>
+            <button
+              onClick={() => setToolsOpen((v) => !v)}
+              aria-expanded={toolsOpen}
+              aria-haspopup="true"
+              className={`flex items-center gap-1.5 text-sm transition ${
+                toolsOpen ? "text-white" : "text-slate-400 hover:text-white"
+              }`}
+            >
+              Free tools
+              <Chevron open={toolsOpen} />
+            </button>
+
+            {toolsOpen && (
+              <div className="absolute left-1/2 top-full z-50 mt-4 w-[34rem] -translate-x-1/2 rounded-2xl border border-white/10 bg-ink-900 p-4 shadow-2xl shadow-black/50">
+                {/* CSS columns rather than grid, so groups pack tightly instead
+                    of every column stretching to the tallest group's height */}
+                <div className="columns-2 gap-x-5">
+                  {TOOL_GROUPS.map((g) => (
+                    <div key={g} className="mb-4 break-inside-avoid">
+                      <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+                        {g}
+                      </p>
+                      <div className="space-y-0.5">
+                        {toolsByGroup(g).map((t) => (
+                          <a
+                            key={t.id}
+                            href={`#/tools/${t.id}`}
+                            onClick={() => setToolsOpen(false)}
+                            className="block rounded-lg px-2.5 py-1.5 transition hover:bg-white/5"
+                          >
+                            <span className="block text-sm font-medium text-white">{t.name}</span>
+                            <span className="block text-xs text-slate-500">{t.blurb}</span>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {links.slice(3).map((l) => (
+            <a key={l.href} href={l.href} className="text-sm text-slate-400 transition hover:text-white">
+              {l.label}
+            </a>
+          ))}
+
           <a
             href={identity.cvPath}
             download
@@ -48,8 +137,8 @@ export default function Nav() {
       </nav>
 
       {open && (
-        <div className="border-t border-white/5 px-5 pb-4 md:hidden">
-          {links.map((l) => (
+        <div className="max-h-[70vh] overflow-y-auto border-t border-white/5 px-5 pb-4 md:hidden">
+          {links.slice(0, 3).map((l) => (
             <a
               key={l.href}
               href={l.href}
@@ -59,6 +148,49 @@ export default function Nav() {
               {l.label}
             </a>
           ))}
+
+          <button
+            onClick={() => setMobileToolsOpen((v) => !v)}
+            aria-expanded={mobileToolsOpen}
+            className="flex w-full items-center justify-between py-2.5 text-sm text-slate-300"
+          >
+            Free tools
+            <Chevron open={mobileToolsOpen} />
+          </button>
+          {mobileToolsOpen && (
+            <div className="mb-1 space-y-3 border-l border-white/10 pl-3">
+              {TOOL_GROUPS.map((g) => (
+                <div key={g}>
+                  <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">{g}</p>
+                  {toolsByGroup(g).map((t) => (
+                    <a
+                      key={t.id}
+                      href={`#/tools/${t.id}`}
+                      onClick={() => {
+                        setOpen(false);
+                        setMobileToolsOpen(false);
+                      }}
+                      className="block py-1.5 text-sm text-slate-300"
+                    >
+                      {t.name}
+                    </a>
+                  ))}
+                </div>
+              ))}
+            </div>
+          )}
+
+          {links.slice(3).map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              onClick={() => setOpen(false)}
+              className="block py-2.5 text-sm text-slate-300"
+            >
+              {l.label}
+            </a>
+          ))}
+
           <a href={identity.cvPath} download className="block py-2.5 text-sm font-semibold text-accent-300">
             Download CV
           </a>
