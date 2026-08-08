@@ -180,6 +180,19 @@ export const projects: Project[] = [
     repoLabel: "View on GitHub",
   },
   {
+    title: "Data Quality Detection, Proven",
+    context: "Demo project · Open source",
+    problem:
+      "Most data quality code is written, deployed, and never tested against data that is actually broken. It runs green forever, and nobody finds out it does nothing until a stakeholder spots a wrong number first.",
+    solution:
+      "Planted six known faults in a 180 day metrics feed (a spike, a collapse, missing days, a null flood, a duplicate load), then built rolling-baseline detection with severity routing and a runbook for responding to each.",
+    outcome:
+      "Two tests assert every planted fault is caught and nothing else is flagged. Six planted, six caught, zero false positives, checked on every push.",
+    stack: ["dbt", "DuckDB", "SQL", "Power Automate", "Alerting", "CI"],
+    repo: "https://github.com/Nagdii/analytics-data-quality",
+    repoLabel: "View on GitHub",
+  },
+  {
     title: "Power BI Semantic Model as Code",
     context: "Demo project · Open source",
     problem:
