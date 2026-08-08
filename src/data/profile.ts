@@ -6,10 +6,10 @@
 export const identity = {
   name: "Khaled El Nagdy",
   title: "Analytics Engineer & BI Developer",
-  location: "Cairo, Egypt · Remote-friendly",
-  tagline: "From raw data to decision-ready dashboards.",
+  location: "Cairo, Egypt · Open to remote",
+  tagline: "From raw data to decisions people trust.",
   summary:
-    "Analytics Engineer with 3+ years building end-to-end analytics solutions across Snowflake, dbt, and Power BI. Strong in scalable data modeling, SQL transformation, and executive reporting for international stakeholders. Comfortable owning the pipeline from raw source to decision-ready dashboard, and translating business requirements into reliable data architecture in Agile teams.",
+    "I build the layer that sits between messy source data and the decisions a business makes with it. Most of my work happens in Snowflake, dbt, and Power BI: modelling raw data into something dependable, then turning it into reporting teams actually open. For the past two years I have been embedded with a Canadian retailer, and before that I worked inside a bank's reporting team, where getting the numbers wrong was not an option.",
   cvPath: "cv/Khaled-El-Nagdy-CV.pdf",
 };
 
@@ -23,10 +23,10 @@ export const contact = {
 };
 
 export const stats = [
-  { value: "3+", label: "Years in Analytics & BI" },
-  { value: "5", label: "Companies, enterprise to startup" },
+  { value: "3+", label: "Years in analytics and BI" },
+  { value: "5", label: "Companies, startup to enterprise" },
   { value: "6+", label: "Business functions served" },
-  { value: "E2E", label: "Warehouse → model → dashboard" },
+  { value: "E2E", label: "Warehouse to model to dashboard" },
 ];
 
 export interface Role {
@@ -42,10 +42,10 @@ export const experience: Role[] = [
     title: "Analytics Engineer II",
     company: "FlairsTech",
     period: "04/2024 – 08/2026",
-    location: "Cairo",
+    location: "Cairo, Egypt",
     bullets: [
-      "Employer of record for a two-year embedded consulting engagement, deployed to Groupe Dynamite (Montreal, remote) as their analytics consultant — delivery detailed below.",
-      "Optimized SQL queries, stored procedures, and scheduled jobs, improving report refresh efficiency and processing consistency across client reporting workloads.",
+      "Employer of record for a two year consulting engagement, working embedded with Groupe Dynamite in Montreal. The delivery detail sits under that entry below.",
+      "Tuned SQL queries, stored procedures, and scheduled jobs so client reporting refreshed faster and processed consistently.",
     ],
   },
   {
@@ -54,56 +54,56 @@ export const experience: Role[] = [
     period: "04/2024 – 08/2026",
     location: "Montreal, Canada · Remote · Contract",
     bullets: [
-      "Engaged via FlairsTech as an embedded analytics consultant for Groupe Dynamite.",
-      "Built end-to-end analytics solutions in Snowflake, dbt, and Power BI, converting raw source data into scalable, analytics-ready models powering business-critical reporting.",
-      "Engineered semantic models with DAX and Power Query, improving refresh performance and accuracy across reporting layers.",
-      "Built and maintained data pipelines integrating REST APIs and SQL Server, delivering consistently refreshed insights.",
-      "Automated monitoring and alerting in Power Automate, reducing manual validation effort.",
-      "Developed executive dashboards and paginated reports serving stakeholders across Planning, Sales Ops, Finance, Marketing, and Executive teams.",
+      "Engaged through FlairsTech as an embedded analytics consultant, working directly with their teams.",
+      "Built analytics solutions end to end in Snowflake, dbt, and Power BI, turning raw source data into models the business could rely on for critical reporting.",
+      "Engineered semantic models with DAX and Power Query, which cut refresh times and improved accuracy across every reporting layer.",
+      "Built and maintained pipelines pulling from REST APIs and SQL Server, so insights stayed current without anyone chasing them.",
+      "Automated monitoring and alerting in Power Automate, which meant far less manual validation before each publish.",
+      "Delivered executive dashboards and paginated reports used by Planning, Sales Ops, Finance, Marketing, and Executive teams.",
     ],
   },
   {
     title: "Business Intelligence Developer",
     company: "Dukan",
     period: "02/2025 – 04/2025",
-    location: "KSA · 3-month contract",
+    location: "Saudi Arabia · Remote · Contract",
     bullets: [
-      "Delivered executive dashboards and paginated reports in Power BI and Report Builder, supporting finance and strategic decision-making.",
-      "Partnered with Finance leadership to audit reporting workflows and surface scalability and performance gaps.",
-      "Proposed an analytics modernization roadmap covering data architecture, governance, and reporting efficiency.",
-      "Standardized semantic models and measures and tightened deployment and version control using Tabular Editor.",
+      "Delivered executive dashboards and paginated reports in Power BI and Report Builder to support finance and strategic decisions.",
+      "Worked with Finance leadership to audit how reporting actually ran, and surfaced where it would break as the business grew.",
+      "Proposed a modernization roadmap covering data architecture, governance, and reporting efficiency.",
+      "Standardized semantic models and measures, and tightened deployment and version control using Tabular Editor.",
     ],
   },
   {
     title: "E-Business Reporting Executive",
     company: "QNB AL-AHLI",
     period: "07/2023 – 04/2024",
-    location: "Cairo",
+    location: "Cairo, Egypt",
     bullets: [
-      "Built and maintained enterprise Power BI dashboards and paginated reports tracking marketing campaigns, KPIs, and performance metrics across departments.",
-      "Ran ETL with SQL and PL/SQL across SQL Server and Oracle within a highly regulated enterprise environment.",
-      "Replaced a manual daily refresh with automated, scheduled report distribution and row-level security (RLS) KPI delivery to Marketing, Executive, and POS teams using Power Automate.",
-      "Resolved data discrepancies to maintain integrity across regulated reporting.",
+      "Built and maintained enterprise Power BI dashboards and paginated reports covering marketing campaigns, KPIs, and departmental performance.",
+      "Ran ETL with SQL and PL/SQL across SQL Server and Oracle inside a heavily regulated environment.",
+      "Replaced a manual daily refresh with scheduled distribution and row level security, so Marketing, Executive, and POS teams each received exactly their own numbers.",
+      "Tracked down and resolved data discrepancies to keep regulated reporting trustworthy.",
     ],
   },
   {
     title: "Frontend Developer",
     company: "IntraZero",
     period: "12/2022 – 06/2023",
-    location: "Cairo",
+    location: "Cairo, Egypt",
     bullets: [
-      "Built responsive web applications with React, HTML, CSS, and REST APIs in an Agile team, shipping production features with backend developers and designers.",
-      "Optimized front-end performance and cross-browser compatibility; managed Git-based version control.",
+      "Built responsive web applications with React, HTML, CSS, and REST APIs, shipping production features alongside backend developers and designers.",
+      "Improved front end performance and cross browser behaviour, and handled version control with Git.",
     ],
   },
   {
     title: "System Analyst",
     company: "IntraZero",
     period: "06/2021 – 11/2022",
-    location: "Cairo",
+    location: "Cairo, Egypt",
     bullets: [
       "Gathered and documented business and technical requirements for web and mobile systems.",
-      "Produced UML diagrams, ERDs, and technical specifications across SDLC phases in Agile project teams.",
+      "Produced UML diagrams, ERDs, and technical specifications across the full delivery cycle in Agile teams.",
     ],
   },
 ];
@@ -118,37 +118,37 @@ export const services: Service[] = [
   {
     title: "Executive Dashboards & Reports",
     description:
-      "Decision-ready Power BI dashboards, paginated reports, and Sigma Computing workbooks built for executives — clear KPIs, fast refresh, and layouts stakeholders actually use.",
+      "Power BI dashboards, paginated reports, and Sigma workbooks built for people who have five minutes and a decision to make. Clear KPIs, quick refresh, and a layout that survives contact with real stakeholders.",
     icon: "dashboard",
   },
   {
     title: "Data Modeling & Semantic Layers",
     description:
-      "Star schemas and semantic models engineered with DAX, Power Query (M), and Tabular Editor — accurate, maintainable, and fast across every reporting layer.",
+      "Star schemas and semantic models built with DAX, Power Query, and Tabular Editor. The goal is a model your team can still reason about a year from now, not just one that works today.",
     icon: "model",
   },
   {
     title: "Pipelines & Warehousing",
     description:
-      "End-to-end pipelines on Snowflake and dbt integrating REST APIs, SQL Server, and external sources — raw data transformed into scalable, analytics-ready models.",
+      "Pipelines on Snowflake and dbt that pull from REST APIs, SQL Server, and whatever else your data lives in, then turn it into clean, tested, analytics ready models.",
     icon: "pipeline",
   },
   {
     title: "Reporting Automation & Alerting",
     description:
-      "Scheduled distribution, row-level security delivery, and anomaly monitoring with Power Automate — insights arrive on time, validated, without manual effort.",
+      "Scheduled delivery, row level security, and anomaly monitoring in Power Automate. Reports arrive on time, already checked, without anyone babysitting a refresh.",
     icon: "automation",
   },
   {
     title: "SQL Optimization",
     description:
-      "Query, stored-procedure, and scheduled-job tuning across SQL Server and Oracle — faster refreshes and consistent processing for heavy reporting workloads.",
+      "Tuning queries, stored procedures, and scheduled jobs across SQL Server and Oracle. Usually the difference between a report that loads and one people quietly stop using.",
     icon: "sql",
   },
   {
     title: "BI Audits & Modernization",
     description:
-      "Audits of existing reporting workflows with a concrete modernization roadmap — architecture, governance, versioning, and efficiency gaps turned into an action plan.",
+      "An honest look at your current reporting setup, followed by a roadmap you can act on. Architecture, governance, versioning, and the gaps that are costing you time every week.",
     icon: "audit",
   },
 ];
@@ -166,60 +166,60 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Retail Analytics Platform — open source",
-    context: "Demo project · Runnable in one command",
+    title: "Retail Analytics Platform, open source",
+    context: "Demo project · Runs in one command",
     problem:
-      "Enterprise analytics work sits behind NDAs, so the modeling decisions that actually matter are invisible to anyone evaluating the work.",
+      "Client analytics work sits behind NDAs, which means the modelling decisions that actually matter stay invisible to anyone trying to judge the work.",
     solution:
-      "Built a complete warehouse on synthetic retail data: staging → intermediate → marts, a star schema with two facts and four conformed dimensions, hashed surrogate keys, and 95 automated checks including a reconciliation test that catches silent row loss.",
+      "So I built a complete warehouse on synthetic retail data. Staging through to marts, a star schema with two facts and four conformed dimensions, hashed surrogate keys, and 95 automated checks including a reconciliation test that catches silent row loss in a join.",
     outcome:
-      "Clone it and run `dbt build` — a working, tested warehouse in about a minute, no cloud account needed. Runs unchanged on DuckDB or Snowflake.",
+      "Clone it, run dbt build, and you have a working tested warehouse in about a minute with no cloud account. It runs unchanged on DuckDB or Snowflake.",
     stack: ["dbt", "DuckDB", "Snowflake", "SQL", "Star schema", "CI"],
     repo: "https://github.com/Nagdii/retail-analytics-platform",
     repoLabel: "View on GitHub",
   },
   {
-    title: "End-to-End Analytics Platform on Snowflake + dbt",
+    title: "End-to-End Analytics Platform on Snowflake and dbt",
     context: "Groupe Dynamite · via FlairsTech",
     problem:
-      "Raw data scattered across REST APIs, SQL Server, and external sources — no single analytics-ready layer to power business-critical reporting.",
+      "Data was scattered across REST APIs, SQL Server, and external sources, with no single trustworthy layer underneath the reporting the business depended on.",
     solution:
-      "Modeled the warehouse in Snowflake with dbt transformations, layered semantic models with DAX and Power Query, and shipped executive dashboards in Power BI and Sigma Computing.",
+      "Modelled the warehouse in Snowflake with dbt, layered semantic models on top with DAX and Power Query, and shipped executive dashboards in Power BI and Sigma Computing.",
     outcome:
-      "One governed pipeline from raw source to dashboard, serving Planning, Sales Ops, Finance, Marketing, and Executive teams with consistently refreshed insights.",
+      "One governed path from raw source to dashboard, serving Planning, Sales Ops, Finance, Marketing, and Executive teams with numbers that stayed current.",
     stack: ["Snowflake", "dbt", "Power BI", "Sigma", "SQL Server", "REST APIs"],
   },
   {
     title: "Automated KPI Delivery with Row-Level Security",
     context: "QNB AL-AHLI · Regulated enterprise",
     problem:
-      "KPI reporting depended on a manual daily refresh, delaying delivery to Marketing, Executive, and POS teams inside a regulated environment.",
+      "KPI reporting relied on somebody manually refreshing it every morning, which delayed Marketing, Executive, and POS teams inside an environment where access boundaries are not negotiable.",
     solution:
-      "Replaced the manual process with automated, scheduled report distribution in Power Automate, secured with row-level security so each team sees exactly its own data.",
+      "Replaced the manual step with scheduled distribution in Power Automate, secured with row level security so each team sees exactly its own data and nothing else.",
     outcome:
-      "Hands-off daily KPI delivery with enforced data-access boundaries and integrity maintained across regulated reporting.",
+      "Daily KPIs that arrive on their own, with access rules enforced and reporting integrity intact.",
     stack: ["Power BI", "Power Automate", "RLS", "SQL Server", "Oracle", "PL/SQL"],
   },
   {
     title: "Pipeline Monitoring & Anomaly Alerting",
     context: "Groupe Dynamite · Reporting operations",
     problem:
-      "Data anomalies were reaching published reports before anyone caught them, forcing time-consuming manual validation of every refresh.",
+      "Anomalies were reaching published reports before anyone spotted them, so every refresh needed a slow manual sanity check.",
     solution:
-      "Built automated monitoring and alerting flows in Power Automate that inspect data ahead of publication and flag anomalies to the team immediately.",
+      "Built monitoring and alerting flows in Power Automate that inspect the data before publication and flag anything odd to the team straight away.",
     outcome:
-      "Anomalies surfaced before stakeholders ever see them, with manual validation effort significantly reduced.",
+      "Problems get caught before stakeholders ever see them, and the manual checking mostly went away.",
     stack: ["Power Automate", "Power BI", "SQL"],
   },
   {
-    title: "Analytics Modernization Roadmap & Semantic Standardization",
+    title: "Analytics Modernization Roadmap",
     context: "Dukan · Finance leadership",
     problem:
-      "Reporting workflows had grown organically — scalability limits, performance gaps, and inconsistent measures across models.",
+      "Reporting had grown organically over years. It worked, but it was hitting scalability limits and the same measure meant different things in different models.",
     solution:
-      "Audited workflows with Finance leadership, standardized semantic models and measures, tightened deployment and version control with Tabular Editor, and delivered a modernization roadmap covering architecture, governance, and efficiency.",
+      "Audited the workflows with Finance leadership, standardized the semantic models and measures, tightened deployment and version control with Tabular Editor, and wrote a roadmap covering architecture, governance, and efficiency.",
     outcome:
-      "A concrete, prioritized path to scalable reporting — plus consistent, version-controlled semantic models from day one.",
+      "A prioritized path to reporting that scales, plus consistent version controlled models from day one.",
     stack: ["Power BI", "Report Builder", "Tabular Editor", "Governance"],
   },
 ];
@@ -232,10 +232,24 @@ export const techStack: { group: string; items: string[] }[] = [
   { group: "Workflow", items: ["Git", "Agile / Scrum"] },
 ];
 
-export const education = {
-  degree: "BSc. of Business Administration — English Section",
-  school: "Helwan University",
-  period: "2016 – 2020",
-  extra:
-    "Intensive Training Program (ITP), Data Visualization Track — Information Technology Institute (ITI), 2020–2021",
-};
+export interface Education {
+  qualification: string;
+  institution: string;
+  period: string;
+  location: string;
+}
+
+export const education: Education[] = [
+  {
+    qualification: "Intensive Training Program, Data Visualization Track",
+    institution: "Information Technology Institute (ITI)",
+    period: "2020 – 2021",
+    location: "Cairo, Egypt",
+  },
+  {
+    qualification: "BSc. of Business Administration, English Section",
+    institution: "Helwan University",
+    period: "2016 – 2020",
+    location: "Cairo, Egypt",
+  },
+];

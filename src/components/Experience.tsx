@@ -33,13 +33,19 @@ export default function Experience() {
         ))}
       </ol>
 
-      <div className="mt-12 rounded-2xl border border-white/10 bg-ink-900 p-6">
+      <div className="mt-12">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent-400">Education</p>
-        <p className="mt-2 font-medium text-white">
-          {education.degree} — {education.school}{" "}
-          <span className="font-normal text-slate-500">({education.period})</span>
-        </p>
-        <p className="mt-1 text-sm text-slate-400">{education.extra}</p>
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+          {education.map((e) => (
+            <div key={e.qualification} className="rounded-2xl border border-white/10 bg-ink-900 p-6">
+              <p className="font-medium leading-snug text-white">{e.qualification}</p>
+              <p className="mt-1.5 text-sm text-accent-300">{e.institution}</p>
+              <p className="mt-1 text-sm text-slate-500">
+                {e.period} · {e.location}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </Section>
   );

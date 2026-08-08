@@ -22,7 +22,7 @@ export default function SqlFormatter() {
       <div className="grid gap-6 lg:grid-cols-2">
         <div className="space-y-3">
           <p className="text-sm leading-relaxed text-slate-400">
-            Tokenises before rewriting, so string literals and comments are left exactly as written — the usual
+            Tokenises before rewriting, so string literals and comments are left exactly as written, which is the usual
             failure of regex-based formatters. Breaks the select list at bracket depth zero, so window functions and
             nested calls stay on one line.
           </p>

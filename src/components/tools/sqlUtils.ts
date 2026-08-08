@@ -23,7 +23,7 @@ const KW = String.fromCharCode(2);
 
 /**
  * Formats SQL by stashing literals and comments first, so they are never
- * rewritten — the usual failure mode of regex-based formatters.
+ * rewritten. That is the usual failure mode of regex-based formatters.
  */
 export function formatSql(sql: string, opts: { upper: boolean; indent: number }): string {
   const { upper, indent } = opts;

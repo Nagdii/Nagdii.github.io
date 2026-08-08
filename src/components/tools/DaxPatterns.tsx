@@ -63,7 +63,7 @@ export default function DaxPatterns() {
     <div className="grid gap-6 lg:grid-cols-5">
       <div className="space-y-4 lg:col-span-2">
         <p className="text-sm leading-relaxed text-slate-400">
-          Time intelligence is where most DAX goes wrong — usually a missing divide guard or a date table that
+          Time intelligence is where most DAX goes wrong, usually a missing divide guard or a date table that
           isn't marked. Pick your patterns and get correct, formatted measures you can paste straight into Tabular
           Editor.
         </p>
@@ -115,7 +115,7 @@ export default function DaxPatterns() {
         </div>
         <CodeBlock code={code} filename="measures.dax" />
         <p className="text-xs text-slate-500">
-          Assumes a contiguous date table marked with <span className="text-slate-400">Mark as Date Table</span> —
+          Assumes a contiguous date table marked with <span className="text-slate-400">Mark as Date Table</span>.
           without it, time intelligence silently returns wrong results.
         </p>
       </div>

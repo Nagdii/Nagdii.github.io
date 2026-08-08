@@ -7,7 +7,7 @@ export default function Projects() {
       id="projects"
       eyebrow="Case Studies"
       title="Selected work"
-      lead="Enterprise BI work is confidential by nature — these case studies describe the problem, approach, and outcome. Happy to walk through the details in a call."
+      lead="Enterprise BI work is confidential by nature, so these case studies describe the problem, the approach, and what changed. Happy to walk through the details in a call."
     >
       <div className="grid gap-6 lg:grid-cols-2">
         {projects.map((p) => (

@@ -21,8 +21,8 @@ export default function Hero() {
         </h1>
 
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-400">
-          I'm <span className="font-semibold text-white">{identity.name}</span>, {identity.title.toLowerCase()} based
-          in Cairo. {identity.summary}
+          I'm <span className="font-semibold text-white">{identity.name}</span>, an{" "}
+          {identity.title.replace(" & ", " and ")} based in Cairo. {identity.summary}
         </p>
 
         <div className="mt-8 flex flex-wrap items-center gap-3.5">

@@ -37,14 +37,14 @@ function lint(name: string, kind: Kind): Issue {
   const msgs: string[] = [];
   const snake = toSnake(name);
 
-  if (name !== name.toLowerCase()) msgs.push("Contains uppercase — use snake_case");
-  if (/\s/.test(name)) msgs.push("Contains spaces — will need quoting everywhere");
-  if (/-/.test(name)) msgs.push("Contains hyphens — invalid unquoted");
+  if (name !== name.toLowerCase()) msgs.push("Contains uppercase, use snake_case");
+  if (/\s/.test(name)) msgs.push("Contains spaces, will need quoting everywhere");
+  if (/-/.test(name)) msgs.push("Contains hyphens, invalid unquoted");
   if (/__/.test(name)) msgs.push("Double underscore");
   if (/^_|_$/.test(name)) msgs.push("Leading or trailing underscore");
   if (RESERVED.includes(name.toLowerCase())) msgs.push("Reserved SQL word");
   if (/(_v\d+|_final|_new|_old|_copy|_backup|_tmp|^tmp_|^temp_|_test)$|^tmp_/i.test(name))
-    msgs.push("Versioned or temporary name — git already tracks history");
+    msgs.push("Versioned or temporary name, git already tracks history");
   if (name.length > 40) msgs.push("Longer than 40 characters");
 
   let suggestion = snake;
@@ -63,7 +63,7 @@ function lint(name: string, kind: Kind): Issue {
     }
   } else {
     if (/^(id)$/i.test(name)) {
-      msgs.push("Bare `id` is ambiguous — prefix with the entity");
+      msgs.push("Bare `id` is ambiguous, prefix it with the entity");
       suggestion = "entity_id";
     }
     if (/(_flg|_ind)$/i.test(name)) {
@@ -71,7 +71,7 @@ function lint(name: string, kind: Kind): Issue {
       suggestion = "is_" + snake.replace(/(_flg|_ind)$/i, "");
     }
     if (/^(dt|dte)_|_dt$/i.test(name)) {
-      msgs.push("Abbreviated date — prefer _date or _at");
+      msgs.push("Abbreviated date, prefer _date or _at");
       suggestion = snake.replace(/^dt e?_|_dt$/i, "") + "_date";
     }
   }
@@ -117,7 +117,7 @@ export default function NamingLinter() {
         <div className="space-y-3">
           <p className="text-sm leading-relaxed text-slate-400">
             Paste model or column names, one per line. Flags casing, spacing, reserved words, missing layer prefixes,
-            and the versioned names that quietly accumulate in every warehouse — then suggests the fix.
+            and the versioned names that quietly accumulate in every warehouse, then suggests the fix.
           </p>
           <Field label="Linting">
             <Select

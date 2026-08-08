@@ -31,7 +31,7 @@ export default function SnowflakeCost() {
     return { hours, credits, monthly: credits * creditPrice, yearly: credits * creditPrice * 12 };
   }, [current, hoursPerDay, daysPerMonth, clusters, creditPrice]);
 
-  // What one size down would save — the single most common Snowflake cost win
+  // What one size down would save, the single most common Snowflake cost win
   const smaller = SIZES[Math.max(0, SIZES.findIndex((s) => s.value === size) - 1)];
   const saving = useMemo(() => {
     if (smaller.value === size) return 0;
@@ -43,14 +43,14 @@ export default function SnowflakeCost() {
     <div className="grid gap-6 lg:grid-cols-5">
       <div className="space-y-4 lg:col-span-2">
         <p className="text-sm leading-relaxed text-slate-400">
-          Warehouse spend compounds quietly. Model it before the invoice does — credits scale 2× with every size
+          Warehouse spend compounds quietly. Model it before the invoice does. Credits scale 2× with every size
           step, so the sizing decision matters more than almost anything else you tune.
         </p>
         <Field label="Warehouse size">
           <Select
             value={size}
             onChange={(e) => setSize(e.target.value)}
-            options={SIZES.map((s) => ({ value: s.value, label: `${s.label} — ${s.credits} credit/hr` }))}
+            options={SIZES.map((s) => ({ value: s.value, label: `${s.label} · ${s.credits} credit/hr` }))}
           />
         </Field>
         <div className="grid grid-cols-2 gap-3">
@@ -104,8 +104,8 @@ export default function SnowflakeCost() {
         {saving > 0 && (
           <div className="rounded-xl border border-accent-500/30 bg-accent-500/5 px-4 py-3 text-sm text-slate-300">
             Dropping to <span className="font-semibold text-accent-300">{smaller.label}</span> would save{" "}
-            <span className="font-semibold text-accent-300">{money(saving)}/month</span> ({money(saving * 12)}/yr) —
-            worth testing before you scale up.
+            <span className="font-semibold text-accent-300">{money(saving)}/month</span> ({money(saving * 12)}/yr).
+            Worth testing before you scale up.
           </div>
         )}
 
@@ -139,7 +139,7 @@ export default function SnowflakeCost() {
           </table>
         </div>
         <p className="text-xs text-slate-500">
-          Estimate only — excludes storage, cloud services, and serverless features. Default $3.00/credit reflects
+          Estimate only. Excludes storage, cloud services, and serverless features. Default $3.00/credit reflects
           Enterprise on-demand; check your contract rate.
         </p>
       </div>

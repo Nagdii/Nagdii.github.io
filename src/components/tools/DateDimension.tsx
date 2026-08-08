@@ -51,7 +51,7 @@ function sqlFor(dialect: Dialect, start: string, end: string, fiscalStart: numbe
       : `CASE WHEN EXTRACT(MONTH FROM d) >= ${fiscalStart} THEN EXTRACT(YEAR FROM d) + 1 ELSE EXTRACT(YEAR FROM d) END`;
 
   if (dialect === "snowflake") {
-    return `-- Snowflake date dimension — ${start} to ${end}
+    return `-- Snowflake date dimension, ${start} to ${end}
 create or replace table dim_date as
 with bounds as (
     select '${start}'::date as start_date, '${end}'::date as end_date
@@ -82,7 +82,7 @@ order by d;`;
   }
 
   if (dialect === "tsql") {
-    return `-- SQL Server date dimension — ${start} to ${end}
+    return `-- SQL Server date dimension, ${start} to ${end}
 ;with days as (
     select cast('${start}' as date) as d
     union all
@@ -109,7 +109,7 @@ from days
 option (maxrecursion 0);`;
   }
 
-  return `-- PostgreSQL date dimension — ${start} to ${end}
+  return `-- PostgreSQL date dimension, ${start} to ${end}
 create table dim_date as
 select
     to_char(d, 'YYYYMMDD')::int                as date_key,
@@ -168,7 +168,7 @@ export default function DateDimension() {
             ]}
           />
         </Field>
-        <Field label="Fiscal year starts" hint={`FY labelled by the year it ends in — ${days.toLocaleString()} rows total.`}>
+        <Field label="Fiscal year starts" hint={`FY labelled by the year it ends in. ${days.toLocaleString()} rows total.`}>
           <Select
             value={String(fiscalStart)}
             onChange={(e) => setFiscalStart(Number(e.target.value))}

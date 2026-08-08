@@ -56,7 +56,7 @@ export default function SqlToDbt() {
             Turns ad-hoc SQL into a dbt model: swaps hard-coded table names for{" "}
             <code className="text-accent-300">source()</code> or <code className="text-accent-300">ref()</code>, adds
             the config block, and scaffolds the{" "}
-            <code className="text-accent-300">is_incremental()</code> guard. CTE names are left alone — only real
+            <code className="text-accent-300">is_incremental()</code> guard. CTE names are left alone, only real
             tables get rewritten.
           </p>
           <div className="grid grid-cols-2 gap-3">

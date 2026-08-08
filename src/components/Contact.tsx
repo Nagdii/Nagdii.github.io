@@ -15,13 +15,13 @@ export default function Contact() {
       id="contact"
       eyebrow="Contact"
       title="Let's build your reporting layer"
-      lead="Whether it's a freelance dashboard project or a full-time analytics role — I usually reply within a day."
+      lead="A freelance dashboard project or a full-time analytics role, either way I usually reply within a day."
     >
       <div className="grid gap-6 lg:grid-cols-5">
         <div className="rounded-2xl border border-accent-500/30 bg-accent-500/5 p-7 lg:col-span-2">
           <h3 className="font-display text-xl font-semibold text-white">Start a conversation</h3>
           <p className="mt-2 text-sm leading-relaxed text-slate-400">
-            Fastest way to reach me — one click, no forms.
+            Fastest way to reach me. One click, no forms.
           </p>
           <div className="mt-6 flex flex-col gap-3">
             <a

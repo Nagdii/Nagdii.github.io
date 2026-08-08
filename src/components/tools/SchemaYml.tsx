@@ -37,7 +37,7 @@ export default function SchemaYml() {
   const yml = useMemo(() => {
     if (!columns.length) return "# Paste a column list to begin.";
 
-    const lines: string[] = ["version: 2", "", "models:", `  - name: ${model}`, `    description: "TODO — what this model represents, and its grain."`];
+    const lines: string[] = ["version: 2", "", "models:", `  - name: ${model}`, `    description: "TODO: what this model represents, and its grain."`];
 
     if (style === "contract") {
       lines.push("    config:", "      contract:", "        enforced: true");
@@ -83,7 +83,7 @@ export default function SchemaYml() {
       <div className="grid gap-6 lg:grid-cols-2">
         <div className="space-y-3">
           <p className="text-sm leading-relaxed text-slate-400">
-            Paste column names — one per line or comma separated — and get a{" "}
+            Paste column names, one per line or comma separated, and get a{" "}
             <code className="text-accent-300">schema.yml</code> with descriptions and sensible tests already wired.
             Anything ending in <code className="text-accent-300">_id</code> gets a{" "}
             <code className="text-accent-300">relationships</code> test pointed at the matching dimension, so you

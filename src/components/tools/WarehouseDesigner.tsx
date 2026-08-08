@@ -84,7 +84,7 @@ export default function WarehouseDesigner() {
       <div className="grid gap-6 lg:grid-cols-2">
         <div className="space-y-3">
           <p className="text-sm leading-relaxed text-slate-400">
-            Paste a flat transactional extract — one row per line item — and this proposes a star schema. It profiles
+            Paste a flat transactional extract, one row per line item, and this proposes a star schema. It profiles
             every column, then detects <span className="text-accent-300">functional dependencies</span> to work out
             which fields describe the same entity, so <code className="text-accent-300">customer_name</code> and{" "}
             <code className="text-accent-300">customer_city</code> land in one dimension rather than four. Override
@@ -113,7 +113,7 @@ export default function WarehouseDesigner() {
           </div>
           <p className="text-xs text-slate-500">
             Excel: <span className="text-slate-400">File → Save As → CSV UTF-8</span>. Parsing happens in your
-            browser — nothing is uploaded.
+            browser, nothing is uploaded.
           </p>
           <div className="grid grid-cols-2 gap-3">
             <label className="block">

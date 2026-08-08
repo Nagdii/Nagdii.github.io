@@ -40,7 +40,7 @@ export default function Tools() {
       id="tools"
       eyebrow="Free Tools"
       title="Built for analytics engineers"
-      lead={`${TOOLS.length} utilities I reach for on real projects. Everything runs in your browser — no sign-up, no upload, nothing leaves the page.`}
+      lead={`${TOOLS.length} utilities I reach for on real projects. Everything runs in your browser. No sign-up, no upload, nothing leaves the page.`}
       className="bg-ink-900/40"
     >
       <div className="space-y-5">

@@ -16,7 +16,7 @@ export default function Services() {
       id="services"
       eyebrow="Services"
       title="What I can do for you"
-      lead="Available for freelance engagements and full-time roles — the same end-to-end skill set either way."
+      lead="Available for freelance engagements and full-time roles. Same skill set either way."
       className="bg-ink-900/40"
     >
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

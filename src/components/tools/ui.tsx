@@ -42,7 +42,7 @@ export function CodeBlock({ code, filename }: { code: string; filename?: string 
       setCopied(true);
       setTimeout(() => setCopied(false), 1600);
     } catch {
-      /* clipboard blocked — the code is selectable anyway */
+      /* clipboard blocked, the code is selectable anyway */
     }
   }
 

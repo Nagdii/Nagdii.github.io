@@ -3,7 +3,7 @@
 //
 // The interesting part is dimension grouping: rather than relying on
 // column-name prefixes alone, we detect functional dependencies
-// (A → B when every value of A maps to exactly one value of B) and
+// (A implies B when every value of A maps to exactly one value of B) and
 // cluster columns that describe the same entity.
 // ─────────────────────────────────────────────────────────────
 
@@ -141,7 +141,7 @@ function determines(rows: string[][], a: number, b: number): boolean {
 /** Sanitise for use as a SQL identifier, preserving any _id/_key suffix. */
 const col = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
 
-/** Sanitise and strip key suffixes — for naming an entity, not a column. */
+/** Sanitise and strip key suffixes, for naming an entity rather than a column. */
 const entity = (s: string) => col(s).replace(/(_id|_key|_code|_no|_num)$/, "");
 
 const firstToken = (s: string) => col(s).split("_")[0];
@@ -220,7 +220,7 @@ export function generateDDL(model: Model, columns: Column[], d: Dialect, staging
   ];
 
   if (model.dateColumns.length) {
-    out.push(`-- Conformed date dimension — shared by every date role`);
+    out.push(`-- Conformed date dimension, shared by every date role`);
     out.push(`create table dim_date (
     date_key        int primary key,
     full_date       date not null,

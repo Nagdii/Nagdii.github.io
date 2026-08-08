@@ -173,7 +173,7 @@ export default function PowerQuerySnippets() {
     <div className="grid gap-6 lg:grid-cols-5">
       <div className="space-y-2 lg:col-span-2">
         <p className="mb-3 text-sm leading-relaxed text-slate-400">
-          The M patterns worth keeping — the ones that are genuinely fiddly to write from memory, especially API
+          The M patterns worth keeping, the ones that are genuinely fiddly to write from memory, especially API
           pagination and query folding.
         </p>
         {SNIPPETS.map((s) => (
