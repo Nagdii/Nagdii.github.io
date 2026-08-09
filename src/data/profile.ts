@@ -9,7 +9,7 @@ export const identity = {
   location: "Cairo, Egypt · Open to remote",
   tagline: "From raw data to decisions people trust.",
   summary:
-    "I'm happiest with data while it's still a mess. Working out the real grain of a table, chasing down why two reports disagree, then modelling it until the number finally stops moving: that's the part I genuinely enjoy. Professionally that means Snowflake, dbt, and Power BI, most recently across a two year engagement with a Canadian retailer. Outside of work I keep building things for the problems that annoy me, an open-source warehouse and eleven small tools, all free on this site.",
+    "I'm happiest with data while it's still a mess. Working out the real grain of a table, chasing down why two reports disagree, then modelling it until the number finally stops moving: that's the part I genuinely enjoy. Professionally that means Snowflake, dbt, and Power BI. Outside of work I keep building things for the problems that annoy me, an open-source warehouse and eleven small tools, all free on this site.",
   cvPath: "cv/Khaled-El-Nagdy-CV.pdf",
 };
 

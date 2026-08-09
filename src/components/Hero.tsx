@@ -51,10 +51,13 @@ export default function Hero() {
 
         <dl className="mt-16 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 sm:grid-cols-4">
           {stats.map((s) => {
+            // mt-auto pins every value to the bottom of the tile, so a label
+            // that wraps to two lines does not push its number out of line
+            // with the others.
             const body = (
               <>
-                <dt className="order-last mt-1 text-sm text-slate-400">{s.label}</dt>
-                <dd className="font-display text-3xl font-bold text-accent-400">{s.value}</dd>
+                <dt className="text-sm leading-snug text-slate-400">{s.label}</dt>
+                <dd className="mt-auto pt-2 font-display text-3xl font-bold text-accent-400">{s.value}</dd>
               </>
             );
             return s.href ? (
@@ -63,12 +66,12 @@ export default function Hero() {
                 href={s.href}
                 target={s.href.startsWith("http") ? "_blank" : undefined}
                 rel="noreferrer"
-                className="bg-ink-900 px-6 py-6 transition hover:bg-ink-800/70"
+                className="flex flex-col bg-ink-900 px-6 py-6 transition hover:bg-ink-800/70"
               >
                 {body}
               </a>
             ) : (
-              <div key={s.label} className="bg-ink-900 px-6 py-6">
+              <div key={s.label} className="flex flex-col bg-ink-900 px-6 py-6">
                 {body}
               </div>
             );
