@@ -56,7 +56,7 @@ export default function Hero() {
             // with the others.
             const body = (
               <>
-                <dt className="text-sm leading-snug text-slate-400">{s.label}</dt>
+                <dt className="text-[13px] leading-snug text-slate-400">{s.label}</dt>
                 <dd className="mt-auto pt-2 font-display text-3xl font-bold text-accent-400">{s.value}</dd>
               </>
             );
@@ -66,12 +66,12 @@ export default function Hero() {
                 href={s.href}
                 target={s.href.startsWith("http") ? "_blank" : undefined}
                 rel="noreferrer"
-                className="flex flex-col bg-ink-900 px-6 py-6 transition hover:bg-ink-800/70"
+                className="flex flex-col bg-ink-900 px-5 py-6 transition hover:bg-ink-800/70"
               >
                 {body}
               </a>
             ) : (
-              <div key={s.label} className="flex flex-col bg-ink-900 px-6 py-6">
+              <div key={s.label} className="flex flex-col bg-ink-900 px-5 py-6">
                 {body}
               </div>
             );
