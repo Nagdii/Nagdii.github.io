@@ -23,11 +23,11 @@ export const contact = {
 };
 
 export const stats = [
-  { value: "3+", label: "Years in analytics and BI" },
+  { value: "4+", label: "Years in analytics and BI" },
   { value: "5", label: "Companies, startup to enterprise" },
   { value: "3", label: "Countries delivered for" },
   // Backed by the QNB AL-AHLI case study, which the tile links to
-  { value: "0", label: "Manual refreshes left after automation", href: "#projects" },
+  { value: "0", label: "Manual refreshes after automation", href: "#projects" },
 ];
 
 export interface Role {
