@@ -14,7 +14,7 @@ const ICONS: Record<string, string> = {
 };
 
 const channels = [
-  { key: "email", label: "Email", value: contact.email, href: `mailto:${contact.email}?subject=Project inquiry`, note: "Fastest" },
+  { key: "email", label: "Email", value: contact.email, href: `mailto:${contact.email}?subject=Project inquiry` },
   { key: "whatsapp", label: "WhatsApp", value: contact.phone, href: contact.whatsapp },
   { key: "phone", label: "Phone", value: contact.phone, href: contact.phoneHref },
   { key: "linkedin", label: "LinkedIn", value: "linkedin.com/in/nagdii", href: contact.linkedin },
@@ -72,12 +72,6 @@ export default function Contact() {
                 </span>
                 <span className="block truncate text-sm font-medium text-white">{c.value}</span>
               </span>
-
-              {c.note && (
-                <span className="hidden shrink-0 rounded-full border border-accent-500/30 bg-accent-500/10 px-2.5 py-1 text-[11px] font-semibold text-accent-300 sm:block">
-                  {c.note}
-                </span>
-              )}
 
               <svg
                 width="16"
