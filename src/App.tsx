@@ -7,7 +7,8 @@ import TechStack from "./components/TechStack";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ToolPage from "./components/ToolPage";
-import { useHashRoute, toolIdFromHash } from "./hooks/useHashRoute";
+import ToolsIndex from "./components/ToolsIndex";
+import { useHashRoute, toolIdFromHash, isToolsIndex } from "./hooks/useHashRoute";
 
 export default function App() {
   const hash = useHashRoute();
@@ -19,6 +20,8 @@ export default function App() {
       <main>
         {toolId ? (
           <ToolPage id={toolId} />
+        ) : isToolsIndex(hash) ? (
+          <ToolsIndex />
         ) : (
           <>
             <Hero />

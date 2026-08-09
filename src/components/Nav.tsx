@@ -34,6 +34,19 @@ export default function Nav() {
   const [toolsOpen, setToolsOpen] = useState(false);
   const [mobileToolsOpen, setMobileToolsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const closeTimer = useRef<number | undefined>(undefined);
+
+  const openTools = () => {
+    window.clearTimeout(closeTimer.current);
+    setToolsOpen(true);
+  };
+
+  const closeToolsSoon = () => {
+    window.clearTimeout(closeTimer.current);
+    closeTimer.current = window.setTimeout(() => setToolsOpen(false), 160);
+  };
+
+  useEffect(() => () => window.clearTimeout(closeTimer.current), []);
 
   // Close the dropdown on an outside click or Escape
   useEffect(() => {
@@ -66,9 +79,19 @@ export default function Nav() {
             </a>
           ))}
 
-          <div className="relative" ref={dropdownRef}>
-            <button
-              onClick={() => setToolsOpen((v) => !v)}
+          {/* Hover opens the menu, clicking goes to the full index page.
+              The close is delayed so moving the cursor from the trigger down
+              into the panel does not dismiss it on the way. */}
+          <div
+            className="relative"
+            ref={dropdownRef}
+            onMouseEnter={openTools}
+            onMouseLeave={closeToolsSoon}
+          >
+            <a
+              href="#/tools"
+              onFocus={openTools}
+              onClick={() => setToolsOpen(false)}
               aria-expanded={toolsOpen}
               aria-haspopup="true"
               className={`flex items-center gap-1.5 text-sm transition ${
@@ -77,7 +100,7 @@ export default function Nav() {
             >
               Free tools
               <Chevron open={toolsOpen} />
-            </button>
+            </a>
 
             {toolsOpen && (
               <div className="absolute left-1/2 top-full z-50 mt-4 w-[34rem] -translate-x-1/2 rounded-2xl border border-white/10 bg-ink-900 p-4 shadow-2xl shadow-black/50">
@@ -105,6 +128,17 @@ export default function Nav() {
                     </div>
                   ))}
                 </div>
+
+                <a
+                  href="#/tools"
+                  onClick={() => setToolsOpen(false)}
+                  className="mt-1 flex items-center justify-between rounded-lg border-t border-white/10 px-2.5 pb-1 pt-3 text-xs font-semibold text-accent-300 transition hover:text-accent-200"
+                >
+                  See all tools on one page
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </a>
               </div>
             )}
           </div>
@@ -149,14 +183,24 @@ export default function Nav() {
             </a>
           ))}
 
-          <button
-            onClick={() => setMobileToolsOpen((v) => !v)}
-            aria-expanded={mobileToolsOpen}
-            className="flex w-full items-center justify-between py-2.5 text-sm text-slate-300"
-          >
-            Free tools
-            <Chevron open={mobileToolsOpen} />
-          </button>
+          {/* The label navigates to the index, the chevron expands the list */}
+          <div className="flex w-full items-center justify-between">
+            <a
+              href="#/tools"
+              onClick={() => setOpen(false)}
+              className="flex-1 py-2.5 text-sm text-slate-300"
+            >
+              Free tools
+            </a>
+            <button
+              onClick={() => setMobileToolsOpen((v) => !v)}
+              aria-expanded={mobileToolsOpen}
+              aria-label="Show all tools"
+              className="p-2.5 text-slate-400"
+            >
+              <Chevron open={mobileToolsOpen} />
+            </button>
+          </div>
           {mobileToolsOpen && (
             <div className="mb-1 space-y-3 border-l border-white/10 pl-3">
               {TOOL_GROUPS.map((g) => (
