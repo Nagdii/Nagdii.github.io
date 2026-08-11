@@ -22,12 +22,18 @@ export const contact = {
   github: "https://github.com/Nagdii",
 };
 
-export const stats = [
+export interface Stat {
+  value: string;
+  label: string;
+  /** Optional: turns the tile into a link to the proof behind the number. */
+  href?: string;
+}
+
+export const stats: Stat[] = [
   { value: "4+", label: "Years in analytics and BI" },
-  { value: "5", label: "Companies, startup to enterprise" },
   { value: "3", label: "Countries delivered for" },
-  // Backed by the QNB AL-AHLI case study, which the tile links to
-  { value: "0", label: "Manual refreshes after automation", href: "#projects" },
+  { value: "50+", label: "Dashboards shipped" },
+  { value: "1K+", label: "Daily active users" },
 ];
 
 export interface Role {
