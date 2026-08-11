@@ -7,12 +7,16 @@ export default function Hero() {
       <div className="pointer-events-none absolute -top-40 left-1/2 h-96 w-[42rem] -translate-x-1/2 rounded-full bg-accent-500/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-20 sm:px-8 sm:pt-28">
-        <span className="inline-flex items-center gap-2 rounded-full border border-accent-500/30 bg-accent-500/10 px-3.5 py-1.5 text-xs font-semibold text-accent-300">
+        {/* rounded-2xl rather than a pill, so the badge still looks deliberate
+            when the text wraps to two lines on a narrow screen */}
+        <span className="inline-flex max-w-full flex-wrap items-center gap-x-2.5 gap-y-1 rounded-2xl border border-accent-500/30 bg-accent-500/10 px-4 py-2 text-xs font-semibold text-accent-300">
           <span className="relative flex h-2 w-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-400 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-400" />
           </span>
-          Available for freelance &amp; full-time roles
+          <span>Open to full-time, part-time, contract or freelance</span>
+          <span aria-hidden="true" className="hidden text-accent-400/40 sm:inline">·</span>
+          <span className="text-accent-300/75">Remote worldwide, or onsite with visa sponsorship</span>
         </span>
 
         <h1 className="mt-6 max-w-3xl font-display text-4xl font-bold leading-tight text-white sm:text-6xl">
