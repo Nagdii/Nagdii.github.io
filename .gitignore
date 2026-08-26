@@ -8,3 +8,6 @@ public/cv/Khaled El Nagdy CV.pdf
 
 # TypeScript incremental build artifacts
 *.tsbuildinfo
+
+# Original photo kept locally, only the cropped public/khaled.jpg ships
+photo-original.jpg
